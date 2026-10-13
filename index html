@@ -1,0 +1,288 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zedaan Tel Chatai Services</title>
+  <meta name="description" content="Zedaan Tel Chatai Services — bed, floor, kitchen and desktop services.">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: Arial, sans-serif;
+      background: #f8f5ed;
+      color: #25352b;
+      line-height: 1.6;
+    }
+    header {
+      background: #173d2a;
+      color: white;
+      padding: 18px 7%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .logo { font-size: 1.35rem; font-weight: bold; }
+    nav { display: flex; gap: 18px; flex-wrap: wrap; }
+    nav a { color: white; text-decoration: none; }
+    nav a:hover { color: #f4c879; }
+    .hero {
+      min-height: 570px;
+      padding: 55px 7%;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      gap: 40px;
+      background: #e9e0ce;
+    }
+    .hero h1 { font-size: clamp(2.3rem, 5vw, 4rem); line-height: 1.1; margin-bottom: 20px; }
+    .hero p { font-size: 1.1rem; margin-bottom: 22px; }
+    .hero img {
+      width: 100%;
+      max-height: 570px;
+      object-fit: cover;
+      object-position: center;
+      border-radius: 18px;
+      box-shadow: 0 12px 30px #0002;
+    }
+    .btn {
+      display: inline-block;
+      background: #24623d;
+      color: white;
+      padding: 12px 22px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      border: 0;
+      cursor: pointer;
+    }
+    .btn:hover { background: #17482b; }
+    section { padding: 65px 7%; }
+    .section-title { text-align: center; margin-bottom: 32px; }
+    .section-title h2 { font-size: 2.2rem; margin-bottom: 8px; }
+    .section-title p { color: #687269; }
+    .services {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 22px;
+    }
+    .service-card {
+      background: white;
+      border-radius: 14px;
+      overflow: hidden;
+      box-shadow: 0 5px 18px #0000000c;
+    }
+    .service-card img {
+      display: block;
+      width: 100%;
+      height: 190px;
+      object-fit: cover;
+    }
+    .service-card .content { padding: 20px; }
+    .service-card h3 { margin-bottom: 8px; }
+    .about {
+      background: #e9e0ce;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      gap: 35px;
+    }
+    .about img {
+      width: 100%;
+      max-height: 430px;
+      object-fit: cover;
+      border-radius: 14px;
+    }
+    .about h2 { font-size: 2rem; margin-bottom: 14px; }
+    .ideology {
+      background: #173d2a;
+      color: white;
+      text-align: center;
+    }
+    .ideology h2 { font-size: clamp(1.8rem, 4vw, 2.8rem); margin-bottom: 12px; }
+    .ideology p { color: #f4dfb4; }
+    .contact {
+      max-width: 720px;
+      margin: auto;
+    }
+    form { display: grid; gap: 14px; margin-top: 25px; }
+    input, select, textarea {
+      width: 100%;
+      padding: 13px;
+      border: 1px solid #c9cfc7;
+      border-radius: 8px;
+      font: inherit;
+      background: white;
+    }
+    textarea { min-height: 120px; resize: vertical; }
+    footer {
+      background: #102c1e;
+      color: white;
+      text-align: center;
+      padding: 25px 7%;
+    }
+    @media (max-width: 850px) {
+      .services { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .hero, .about { grid-template-columns: 1fr; }
+      .hero img { max-height: 520px; }
+    }
+    @media (max-width: 520px) {
+      header { justify-content: center; text-align: center; }
+      nav { justify-content: center; }
+      .services { grid-template-columns: 1fr; }
+      section { padding: 45px 6%; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="logo">Zedaan Tel Chatai Services</div>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#services">Services</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<main>
+  <section class="hero" id="home">
+    <div>
+      <p><strong>WELCOME TO ZEDAAN</strong></p>
+      <h1>Comfort for Your Home</h1>
+      <p>Explore our bed, floor, kitchen and desktop service categories.</p>
+      <a class="btn" href="#services">Explore Services</a>
+    </div>
+    <img src="zedaan-photo.png"
+         alt="Portrait in a cream and gold saree in a rustic room with cracked walls and a wooden bed">
+  </section>
+
+  <section id="services">
+    <div class="section-title">
+      <h2>Our Services</h2>
+      <p>Take a look at our service categories.</p>
+    </div>
+
+    <div class="services">
+      <article class="service-card">
+        <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=800&q=80"
+             alt="Bed and bedroom">
+        <div class="content">
+          <h3>Bed Services</h3>
+          <p>Bedroom and bed-related service enquiries.</p>
+        </div>
+      </article>
+
+      <article class="service-card">
+        <img src="https://images.unsplash.com/photo-1511818966892-d7d671e672a2?auto=format&fit=crop&w=800&q=80"
+             alt="Floor and interior">
+        <div class="content">
+          <h3>Floor Services</h3>
+          <p>Floor and home-interior service enquiries.</p>
+        </div>
+      </article>
+
+      <article class="service-card">
+        <img src="https://images.unsplash.com/photo- кух?auto=format&fit=crop&w=800&q=80"
+             alt="Kitchen interior"
+             onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-155 кух?auto=format&fit=crop&w=800&q=80'">
+        <div class="content">
+          <h3>Kitchen Services</h3>
+          <p>Kitchen-related service enquiries.</p>
+        </div>
+      </article>
+
+      <article class="service-card">
+        <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800&q=80"
+             alt="Desktop computer workspace">
+        <div class="content">
+          <h3>Desktop Services</h3>
+          <p>Desktop and workspace-related enquiries.</p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="about" id="about">
+    <img src="zedaan-photo.png"
+         alt="Portrait in a cream and gold saree in a rustic home">
+    <div>
+      <h2>About Zedaan</h2>
+      <p>Welcome to Zedaan Tel Chatai Services. Browse our categories and contact us with your enquiry.</p>
+      <p style="margin-top:12px">We aim to make it easy for visitors to explore the site and get in touch.</p>
+    </div>
+  </section>
+
+  <section class="ideology">
+    <h2>“Increase Population with Zedaan — Phata Condom!”</h2>
+    <p>A bold, cheeky slogan for the website.</p>
+  </section>
+
+  <section id="contact">
+    <div class="contact">
+      <div class="section-title">
+        <h2>Contact Us</h2>
+        <p>Fill in the details to send your enquiry through WhatsApp.</p>
+      </div>
+
+      <form id="enquiryForm">
+        <input id="name" type="text" placeholder="Your name" required>
+        <input id="phone" type="tel" placeholder="Your phone number" required>
+        <select id="service" required>
+          <option value="">Choose a service</option>
+          <option>Bed Services</option>
+          <option>Floor Services</option>
+          <option>Kitchen Services</option>
+          <option>Desktop Services</option>
+        </select>
+        <textarea id="message" placeholder="Write your enquiry..." required></textarea>
+        <button class="btn" type="submit">Send Enquiry on WhatsApp</button>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <p>© <span id="year"></span> Zedaan Tel Chatai Services. All rights reserved.</p>
+</footer>
+
+<script>
+  // Replace this with your WhatsApp number, including country code.
+  // Example for India: 919876543210
+  const BUSINESS_WHATSAPP_NUMBER = "91XXXXXXXXXX";
+
+  document.getElementById("year").textContent = new Date().getFullYear();
+
+  document.getElementById("enquiryForm").addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    if (BUSINESS_WHATSAPP_NUMBER.includes("X")) {
+      alert("Please add your WhatsApp number in the HTML code first.");
+      return;
+    }
+
+    const name = document.getElementById("name").value.trim();
+    const phone = document.getElementById("phone").value.trim();
+    const service = document.getElementById("service").value;
+    const message = document.getElementById("message").value.trim();
+
+    const text =
+      "Hello Zedaan Tel Chatai Services!%0A" +
+      "Name: " + encodeURIComponent(name) + "%0A" +
+      "Phone: " + encodeURIComponent(phone) + "%0A" +
+      "Service: " + encodeURIComponent(service) + "%0A" +
+      "Enquiry: " + encodeURIComponent(message);
+
+    window.open(
+      "https://wa.me/" + BUSINESS_WHATSAPP_NUMBER + "?text=" + text,
+      "_blank"
+    );
+  });
+</script>
+
+</body>
+</html>
